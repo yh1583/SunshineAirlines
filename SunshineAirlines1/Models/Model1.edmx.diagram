@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="27da59a607204b468f10ade65cb96fb7" Name="Diagram1">
+        <EntityTypeShape EntityType="Session1Model.Aircraft" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.Airport" Width="1.5" PointX="1.5" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.CabinType" Width="1.5" PointX="3.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.City" Width="1.5" PointX="1.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.Country" Width="1.5" PointX="1.5" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.FlightFood" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.FlightFoodReservation" Width="1.5" PointX="10.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.FlightReservation" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.FlightStatu" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.Luggage" Width="1.5" PointX="10.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.Role" Width="1.5" PointX="3.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.Route" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.Schedule" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.SeatLayout" Width="1.5" PointX="6" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Session1Model.User" Width="1.5" PointX="6" PointY="13.125" IsExpanded="true" />
+        <AssociationConnector Association="Session1Model.FK_Schedule_Aircraft" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_SeatLayout_Aircraft" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_Airport_City" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_Route_Airport" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_Route_Airport1" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_FlightReservation_CabinType" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_SeatLayout_CabinType" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_City_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_FlightReservation_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_FlightFoodReservation_FlightFood" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_FlightFoodReservation_FlightReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_FlightReservation_Schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_FlightReservation_SeatLayout" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_FlightReservation_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_Luggage_FlightReservation" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_FlightStatus_Schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_Users_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="Session1Model.FK_Schedule_Route" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

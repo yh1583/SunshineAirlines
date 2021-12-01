@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Session1ModelStoreContainer" CdmEntityContainer="MyDB">
+    <EntitySetMapping Name="Aircraft">
+      <EntityTypeMapping TypeName="Session1Model.Aircraft">
+        <MappingFragment StoreEntitySet="Aircraft">
+          <ScalarProperty Name="AircraftId" ColumnName="AircraftId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FirstSeatsLayout" ColumnName="FirstSeatsLayout" />
+          <ScalarProperty Name="FirstSeatsAmount" ColumnName="FirstSeatsAmount" />
+          <ScalarProperty Name="BusinessSeatsLayout" ColumnName="BusinessSeatsLayout" />
+          <ScalarProperty Name="BusinessSeatsAmount" ColumnName="BusinessSeatsAmount" />
+          <ScalarProperty Name="EconomySeatsLayout" ColumnName="EconomySeatsLayout" />
+          <ScalarProperty Name="EconomySeatsAmount" ColumnName="EconomySeatsAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Airports">
+      <EntityTypeMapping TypeName="Session1Model.Airport">
+        <MappingFragment StoreEntitySet="Airport">
+          <ScalarProperty Name="IATACode" ColumnName="IATACode" />
+          <ScalarProperty Name="AirportName" ColumnName="AirportName" />
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CabinTypes">
+      <EntityTypeMapping TypeName="Session1Model.CabinType">
+        <MappingFragment StoreEntitySet="CabinType">
+          <ScalarProperty Name="CabinTypeId" ColumnName="CabinTypeId" />
+          <ScalarProperty Name="CabinTypeName" ColumnName="CabinTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="Session1Model.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="Session1Model.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlightFoods">
+      <EntityTypeMapping TypeName="Session1Model.FlightFood">
+        <MappingFragment StoreEntitySet="FlightFood">
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlightFoodReservations">
+      <EntityTypeMapping TypeName="Session1Model.FlightFoodReservation">
+        <MappingFragment StoreEntitySet="FlightFoodReservation">
+          <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlightReservations">
+      <EntityTypeMapping TypeName="Session1Model.FlightReservation">
+        <MappingFragment StoreEntitySet="FlightReservation">
+          <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="IDType" ColumnName="IDType" />
+          <ScalarProperty Name="IDTypeNumber" ColumnName="IDTypeNumber" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="ETicketNumber" ColumnName="ETicketNumber" />
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="CabinTypeId" ColumnName="CabinTypeId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+          <ScalarProperty Name="SeatLayoutId" ColumnName="SeatLayoutId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FlightStatus">
+      <EntityTypeMapping TypeName="Session1Model.FlightStatu">
+        <MappingFragment StoreEntitySet="FlightStatus">
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+          <ScalarProperty Name="ActualArrivalTime" ColumnName="ActualArrivalTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Luggages">
+      <EntityTypeMapping TypeName="Session1Model.Luggage">
+        <MappingFragment StoreEntitySet="Luggage">
+          <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Fee" ColumnName="Fee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="Session1Model.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="RoldId" ColumnName="RoldId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Routes">
+      <EntityTypeMapping TypeName="Session1Model.Route">
+        <MappingFragment StoreEntitySet="Route">
+          <ScalarProperty Name="RouteId" ColumnName="RouteId" />
+          <ScalarProperty Name="DepartureAirportIATA" ColumnName="DepartureAirportIATA" />
+          <ScalarProperty Name="ArrivalAirportIATA" ColumnName="ArrivalAirportIATA" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="FlightTime" ColumnName="FlightTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedules">
+      <EntityTypeMapping TypeName="Session1Model.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="AircraftId" ColumnName="AircraftId" />
+          <ScalarProperty Name="RouteId" ColumnName="RouteId" />
+          <ScalarProperty Name="EconomyPrice" ColumnName="EconomyPrice" />
+          <ScalarProperty Name="FlightNumber" ColumnName="FlightNumber" />
+          <ScalarProperty Name="Gate" ColumnName="Gate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeatLayouts">
+      <EntityTypeMapping TypeName="Session1Model.SeatLayout">
+        <MappingFragment StoreEntitySet="SeatLayout">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RowNumber" ColumnName="RowNumber" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="CabinTypeId" ColumnName="CabinTypeId" />
+          <ScalarProperty Name="AircraftId" ColumnName="AircraftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Session1Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

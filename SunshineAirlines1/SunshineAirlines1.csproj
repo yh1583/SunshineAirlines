@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72B68EBA-BCF9-4D4C-90ED-1877A19C22C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SunshineAirlines1</RootNamespace>
+    <AssemblyName>SunshineAirlines1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\YFF\Desktop\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dals\AllFun.cs" />
+    <Compile Include="Dals\FlightFoodDal.cs" />
+    <Compile Include="Dals\FlightFoodReservationDal.cs" />
+    <Compile Include="Dals\FlightReservationDal.cs" />
+    <Compile Include="Dals\FlightScheduleDal.cs" />
+    <Compile Include="Dals\FlightScheduleManagementDal.cs" />
+    <Compile Include="Dals\FlightSearchDal.cs" />
+    <Compile Include="Dals\FlightStatusDal.cs" />
+    <Compile Include="Dals\UsersDal.cs" />
+    <Compile Include="Forms\Administrator\AdministratorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\AdministratorMenu.Designer.cs">
+      <DependentUpon>AdministratorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\EditOrAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\EditOrAddUser.Designer.cs">
+      <DependentUpon>EditOrAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\FlightScheduleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\FlightScheduleManagement.Designer.cs">
+      <DependentUpon>FlightScheduleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\TicketSalesDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\TicketSalesDetail.Designer.cs">
+      <DependentUpon>TicketSalesDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\TicketStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\TicketStatistics.Designer.cs">
+      <DependentUpon>TicketStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrator\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrator\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\FlightSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\FlightSearch.Designer.cs">
+      <DependentUpon>FlightSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\FlightStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\FlightStatus.Designer.cs">
+      <DependentUpon>FlightStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\FoodServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\FoodServices.Designer.cs">
+      <DependentUpon>FoodServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\FoodUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\FoodUnit.Designer.cs">
+      <DependentUpon>FoodUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\NonStopUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\NonStopUnit.Designer.cs">
+      <DependentUpon>NonStopUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\OfficeUserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\OfficeUserMenu.Designer.cs">
+      <DependentUpon>OfficeUserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\StopUnit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\OfficeUser\StopUnit.Designer.cs">
+      <DependentUpon>StopUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSplashScreen.designer.cs">
+      <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Aircraft.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Airport.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CabinType.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\City.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Country.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FlightFood.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FlightFoodReservation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FlightReservation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FlightStatu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Luggage.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Route.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Schedule.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SeatLayout.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Weather.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Session1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Session1DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Session1DataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Administrator\AdministratorMenu.resx">
+      <DependentUpon>AdministratorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\EditOrAddUser.resx">
+      <DependentUpon>EditOrAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\FlightScheduleManagement.resx">
+      <DependentUpon>FlightScheduleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\TicketSalesDetail.resx">
+      <DependentUpon>TicketSalesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\TicketStatistics.resx">
+      <DependentUpon>TicketStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administrator\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OfficeUser\FlightSearch.resx">
+      <DependentUpon>FlightSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OfficeUser\FlightStatus.resx">
+      <DependentUpon>FlightStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OfficeUser\FoodServices.resx">
+      <DependentUpon>FoodServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OfficeUser\FoodUnit.resx">
+      <DependentUpon>FoodUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OfficeUser\NonStopUnit.resx">
+      <DependentUpon>NonStopUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OfficeUser\OfficeUserMenu.resx">
+      <DependentUpon>OfficeUserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OfficeUser\StopUnit.resx">
+      <DependentUpon>StopUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplashScreen.resx">
+      <DependentUpon>FrmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Lang\Basic.json" />
+    <None Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Session1DataSet.xsc">
+      <DependentUpon>Session1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Session1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Session1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Session1DataSet.xss">
+      <DependentUpon>Session1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Session1DataSet1.xsc">
+      <DependentUpon>Session1DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Session1DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Session1DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Session1DataSet1.xss">
+      <DependentUpon>Session1DataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\leidian.png" />
+    <None Include="Resources\xue.png" />
+    <None Include="Resources\shachen.png" />
+    <None Include="Resources\wu.png" />
+    <None Include="Resources\bingbao.png" />
+    <None Include="Resources\duoyun.png" />
+    <None Include="Resources\yu.png" />
+    <None Include="Resources\noInternet.png" />
+    <None Include="Resources\yin.png" />
+    <None Include="Resources\qing.png" />
+    <None Include="Resources\log-out.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\fold.png" />
+    <None Include="Resources\system setting.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\User Management.png" />
+    <None Include="Resources\flight statistics.png" />
+    <None Include="Resources\flight management.png" />
+    <None Include="Resources\flight status.png" />
+    <None Include="Resources\food.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\SunshineAirlinesLogo.png" />
+    <None Include="Resources\SunshineAirlinesBackgroundByLogin.jpg" />
+    <None Include="Resources\SunshineAirlinesBackground.jpg" />
+    <None Include="bin\Debug\Images\Paging\first.png" />
+    <None Include="bin\Debug\Images\Paging\previous.png" />
+    <None Include="bin\Debug\Images\Paging\next.png" />
+    <None Include="bin\Debug\Images\Paging\last.png" />
+    <None Include="bin\Debug\Images\exchange.png" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
